@@ -1,0 +1,107 @@
+.nav-container{
+    /* background-color: darkslategrey; */
+    background: #D38312;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A83279, #D38312);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 7%;
+
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border-radius: inherit;
+    margin:0 .5em;
+    position: relative;
+}
+
+.navitem-container{
+    width: 100%;
+    height: 55px;
+    /* padding:.5em; */
+    color:white;
+    /* background-color: red; */
+    /* border-bottom: 2px solid black; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: inherit;
+    border:none;
+    transition:border 3s ease 0s;
+    z-index: 2;
+}
+.navitem-container a{
+    color:white;
+}
+
+.active{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    border-radius: inherit;
+    /* opacity: .1; */
+    z-index: 1;
+    background-color: darkslategrey;
+    transition: all 600ms ease 0s;
+}
+
+.navitem-container:hover {
+    border-bottom: 1px solid white;
+}
+
+.navitem-container:hover:nth-child(1)  ~ .active{
+    /* border-bottom: 1px solid white; */
+    left:0;
+}
+.navitem-container:hover:nth-child(2)  ~ .active{
+    /* border-bottom: 1px solid white; */
+    left:20%;
+}
+.navitem-container:hover:nth-child(3)  ~ .active{
+    /* border-bottom: 1px solid white; */
+    left:40%;
+}
+.navitem-container:hover:nth-child(4)  ~ .active{
+    /* border-bottom: 1px solid white; */
+    left:60%;
+}
+.navitem-container:hover:nth-child(5)  ~ .active{
+    /* border-bottom: 1px solid white; */
+    left:80%;
+}
+
+/* .navitem-container:nth-child(2):hover{
+    background-color: darkslategrey;
+} */
+/* .navitem-container::before{
+    content:'';
+    background-color: darkslategrey;
+    position: absolute;
+    width:100%;
+    height:100%;
+    border-radius: inherit;
+    opacity: 0;
+    transition: all 1000ms cubic-bezier(0.68, -0.55, 0.61, 1.05);
+    
+    
+}
+
+.navitem-container:hover:before{
+    opacity: 1;
+}
+
+.navitem-container:hover{
+    border-bottom: 1px solid white;
+}
+
+.navitem-container:nth-child(2)::before{
+    left:100%;
+} */
+
+/* all 1000ms cubic-bezier(0.68, -0.55, 0.61, 1.05) */
+/* (1, 0, 0, 1); */
